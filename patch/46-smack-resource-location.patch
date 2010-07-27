@@ -1,0 +1,11 @@
+--- org/jivesoftware/smack/SmackConfiguration.java
++++ org/jivesoftware/smack/SmackConfiguration.java
+@@ -65,7 +65,7 @@
+             // Get an array of class loaders to try loading the providers files from.
+             ClassLoader[] classLoaders = getClassLoaders();
+             for (ClassLoader classLoader : classLoaders) {
+-                Enumeration configEnum = classLoader.getResources("META-INF/smack-config.xml");
++                Enumeration configEnum = classLoader.getResources("res/raw/smack-config.xml");
+                 while (configEnum.hasMoreElements()) {
+                     URL url = (URL) configEnum.nextElement();
+                     InputStream systemStream = null;
